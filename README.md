@@ -38,7 +38,7 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 **NOTA:** En la carpeta `.git` existen los siguientes archivos(dentro de `config` se pueden ver datos como con el comando `git config -l`):  
 
 ![ls](https://raw.githubusercontent.com/KamiKeys/guia-git-basica/master/images/image6.png)  
-`git reset HEAD clase2.cs` → sirve para quitar un archivo.  
+`git reset HEAD clase2.cs` → sirve para quitar un archivo del index (del add).  
 `git reflog` → para ver todas las páginas y sha1.  
 `git reset` y las primeras letras de **sha1** se vuelve a ese momento del pasado.  
 `git reset --hard commit` → vuelve atrás y borra lo que estuviese delante. (Si hemos subido un push)  
@@ -47,7 +47,7 @@ al hacer un commit SIEMPRE se pone un mini texto de hasta 50 caracteres para exp
 `git rm` → elimina archivo.  
 `git rm --cached` → Para quitar de la rama el archivo, pero sigue estando en el directorio.  
 `git checkout sha1delcommit` → volvemos a un commit anterior  
-`git checkout -b <nombre rama> sh1 commit` → se hace una rama desde el commit indicado.  
+`git checkout -b <nombre rama> sha1delcommit` → se hace una rama desde el commit indicado.  
 
 
 ## Repositorios Remotos
@@ -93,7 +93,7 @@ De forma predeterminada etiqueta el último commit.
 **Las etiquetas no se publican en los push. Tengo que hacer un push específico de la etiqueta o de todas.** → `git push origin v0.0.1` (en este caso es para una solo.)  
 **Sube todas las etiquetas** → `git push origin --tags`    
 
-`git push -u origin master` → guarda `origin master` para luego hacer más tarde el push son poner lo otro.  
+`git push -u origin master` → guarda `origin master` para luego hacer más tarde el push sin poner lo otro.  
 
 ## Firma electrónica    
 **Ver nuestras claves** → `gpg --list-secret-keys --keyid-format LONG`
